@@ -1,5 +1,5 @@
 import 'dart:ffi';
-
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
 
@@ -27,6 +27,7 @@ class Constants {
     // await db.execute('ALTER TABLE notes ADD COLUMN title TEXT');
     print("database Upgraded ==================================");
   }
+
 
   _onCreat(Database db, int version) async {
     Batch batch = db.batch();
@@ -78,15 +79,15 @@ class Constants {
     return response;
   }
 
-  update(String table ,  Map<String, Object?> values , String? myWhere) async {
+  update(String table, Map<String, Object?> values, String? myWhere) async {
     Database? mydb = await db;
-    int response = await mydb!.update(table, values , where: myWhere);
+    int response = await mydb!.update(table, values, where: myWhere);
     return response;
   }
 
-  delete(String table ,  String? myWhere) async {
+  delete(String table, String? myWhere) async {
     Database? mydb = await db;
-    int response = await mydb!.delete(table , where: myWhere);
+    int response = await mydb!.delete(table, where: myWhere);
     return response;
   }
 }
