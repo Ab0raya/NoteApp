@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
             debugShowCheckedModeBanner: false,
-            home:isViewed!=0? home(): Introduction(),
+            home:isViewed!=0?  Introduction():home(),
             routes: {"add notes": (context) => AddNotes()},
           );
 
