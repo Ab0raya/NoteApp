@@ -38,6 +38,7 @@ class _homeState extends State<home> {
 
   @override
   Widget build(BuildContext context) {
+    final textSize = MediaQuery.of(context).copyWith(textScaleFactor: 1.0);
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
@@ -90,14 +91,15 @@ class _homeState extends State<home> {
                     child: Container(
                     child: Column(
                       children: [
-                        SizedBox(
-                          height: 40,
-                        ),
                         Image.asset(
-                          "assets/fist.png",
+                          "assets/pocket.png",
                           width: 200,
                           height: 200,
                         ),
+                        SizedBox(
+                          height: 40,
+                        ),
+
                         Text(
                           "There is no notes to show ...",
                           textAlign: TextAlign.center,
@@ -168,7 +170,55 @@ class _homeState extends State<home> {
                                   notes.removeWhere((element) =>
                                       element['id'] == notes[i]['id']);
                                   setState(() {});
+                                  final snackBar = SnackBar(
+                                    content: Stack(
+                                      children: [
+                                        Row(
+                                          mainAxisAlignment:
+                                          MainAxisAlignment
+                                              .start,
+                                          children: [
+                                            Image.asset(
+                                                "assets/trash.png"),
+                                            SizedBox(
+                                              width: 25,
+                                            ),
+                                            Expanded(
+                                              child: Text(
+                                                "The note deleted succssfuly",
+                                                style: TextStyle(
+                                                    fontSize:
+                                                    20,
+                                                    fontWeight:
+                                                    FontWeight
+                                                        .bold),
+                                                textAlign:
+                                                TextAlign
+                                                    .center,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ],
+                                    ),
+                                    backgroundColor:
+                                    HexColor("#201691"),
+                                    duration:
+                                    Duration(seconds: 2),
+                                    shape: StadiumBorder(),
+                                    behavior: SnackBarBehavior
+                                        .floating,
+                                    margin:
+                                    EdgeInsets.symmetric(
+                                        vertical: 150,
+                                        horizontal: 12),
+                                    elevation: 15,
+                                  );
+                                  ScaffoldMessenger.of(context)
+                                    ..removeCurrentSnackBar()
+                                    ..showSnackBar(snackBar);
                                 }
+
                               },
                               onTap: () async {
                                 Navigator.of(context).push(MaterialPageRoute(
@@ -331,8 +381,7 @@ class _homeState extends State<home> {
                                                               horizontal: 12),
                                                       elevation: 15,
                                                     );
-                                                    ScaffoldMessenger.of(
-                                                        context)
+                                                    ScaffoldMessenger.of(context)
                                                       ..removeCurrentSnackBar()
                                                       ..showSnackBar(snackBar);
                                                   }
