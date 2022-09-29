@@ -143,7 +143,7 @@ class _AddNotesState extends State<AddNotes> {
                                             ),
                                             Expanded(
                                               child: Text(
-                                                "The note added succssfuly",
+                                                "The note added successfully",
                                                 style: TextStyle(
                                                     fontSize: 24,
                                                     fontWeight:

@@ -101,7 +101,7 @@ class _homeState extends State<home> {
                         ),
 
                         Text(
-                          "There is no notes to show ...",
+                          "There is no notes to show",
                           textAlign: TextAlign.center,
                           style: TextStyle(
                               fontSize: 28, fontWeight: FontWeight.bold),
@@ -185,7 +185,7 @@ class _homeState extends State<home> {
                                             ),
                                             Expanded(
                                               child: Text(
-                                                "The note deleted succssfuly",
+                                                "The note deleted successfully",
                                                 style: TextStyle(
                                                     fontSize:
                                                     20,
@@ -292,51 +292,6 @@ class _homeState extends State<home> {
                                                             element['id'] ==
                                                             notes[i]['id']);
                                                     setState(() {});
-                                                    // final snackBar = SnackBar(
-                                                    //     content: Dialog(
-                                                    //       insetAnimationDuration:Duration(seconds: 1) ,
-                                                    //       shape: RoundedRectangleBorder(
-                                                    //           borderRadius: BorderRadius.circular(4)),
-                                                    //       child: Stack(
-                                                    //         alignment: Alignment.topCenter,
-                                                    //         children: [
-                                                    //           Container(
-                                                    //             height: 200,
-                                                    //             child: Padding(
-                                                    //               padding: const EdgeInsets.fromLTRB(
-                                                    //                   10, 70, 10, 10),
-                                                    //               child: Column(
-                                                    //                 children: [
-                                                    //                   Text("Done :)",
-                                                    //                       style: TextStyle(
-                                                    //                         fontSize: 24,
-                                                    //                         fontWeight: FontWeight.bold,
-                                                    //                       ),
-                                                    //                       textAlign: TextAlign.center),
-                                                    //                   Text("Note deleted successfully",
-                                                    //                       style: TextStyle(
-                                                    //                         fontSize: 20,
-                                                    //                       ),
-                                                    //                       textAlign: TextAlign.center),
-                                                    //                 ],
-                                                    //               ),
-                                                    //             ),
-                                                    //           ),
-                                                    //           Positioned(
-                                                    //             child: CircleAvatar(
-                                                    //               backgroundColor: Colors.white,
-                                                    //               radius: 31,
-                                                    //               child: Icon(
-                                                    //                 Icons.delete_forever,
-                                                    //                 color: Colors.red,
-                                                    //                 size: 55,
-                                                    //               ),
-                                                    //             ),
-                                                    //             top: 5,
-                                                    //           ),
-                                                    //         ],
-                                                    //       ),
-                                                    //     ));
                                                     final snackBar = SnackBar(
                                                       content: Stack(
                                                         children: [

@@ -37,7 +37,6 @@ class _IntroductionState extends State<Introduction> {
       int isViewed = 0 ;
       SharedPreferences prefs = await SharedPreferences.getInstance();
       await prefs.setInt("onboard", isViewed);
-      print("dooooooooone");
     }
 
 

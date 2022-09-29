@@ -108,7 +108,8 @@ class _EditNotesState extends State<EditNotes> {
                             }
                           },
                           keyboardType: TextInputType.multiline,
-                          maxLines: 5,
+                          maxLines: 2000,
+                          minLines: 5,
                           controller: note,
                           cursorColor: HexColor("#f7f036"),
                           decoration: const InputDecoration(
@@ -163,7 +164,7 @@ class _EditNotesState extends State<EditNotes> {
                                           ),
                                           Expanded(
                                             child: Text(
-                                              "The note edited succssfuly",
+                                              "The note edited successfully",
                                               style: TextStyle(
                                                   fontSize: 24,
                                                   fontWeight: FontWeight.bold),
