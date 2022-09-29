@@ -1,16 +1,11 @@
-# note_app
 
-A new Flutter project.
+# Note App
 
-## Getting Started
+it's a simple note app , allow you to add your notes easily with awesome design
+# used in application
 
-This project is a starting point for a Flutter application.
+i used flutter framework with dart as programming language and for local database i used SQflite
+## Screenshots
 
-A few resources to get you started if this is your first Flutter project:
+![App Screenshot](https://files.fm/f/hv8zfkz8z)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
